@@ -3,10 +3,20 @@
 ## Instrucciones
 
 Clonar el directorio enviado en la entrega y a continuacion desde el directorio creado ejecutar los comandos:
+   
+para ejecutar el web server mediante EJS
 
-    * npm run ejs; para ejecutar el web server mediante EJS
-    * npm run handle; para ejecutar el web server mediante Handlebars
-    * npm run pug; para ejecutar el web server mediante PUG
+    npm run ejs
+
+para ejecutar el web server mediante Handlebars
+
+    npm run handle
+
+para ejecutar el web server mediante PUG
+
+    npm run pug
+
+
 
 ## Conclusiones
 
