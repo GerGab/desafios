@@ -1,0 +1,17 @@
+h2  Productos
+if (show)
+    table.table.table-dark
+        tr(style='color: white;')
+            th id
+            th Titulo
+            th Precio
+            th Imagen
+        each product in products
+            tr
+                td= product.id
+                td= product.title
+                td= product.price
+                td
+                    img(src=product.thumbnail alt='')
+else
+    h3.alert.alert-danger No se encontraron productos

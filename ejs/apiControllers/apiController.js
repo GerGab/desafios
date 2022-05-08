@@ -1,5 +1,5 @@
 const { fileContainer } = require("../dataBases/fileContainer.js")
-const prodContainer = new fileContainer("./handle/dataBases/products.txt",["title","price","thumbnail","id"]); 
+const prodContainer = new fileContainer("./ejs/dataBases/products.txt",["title","price","thumbnail","id"]); 
 
 let form = false
 
@@ -8,12 +8,12 @@ const apiController =  {
         try{
             const products = await prodContainer.getAll()
             let show = products.length >0
-            res.render('index.handlebars',{form,products,show});
+            res.render('index',{form,products,show});
         }
         catch (err){
             let products = []
             let show = products.length >0
-            res.render('index.handlebars',{form,products,show});
+            res.render('index',{form,products,show});
         }
 
     },

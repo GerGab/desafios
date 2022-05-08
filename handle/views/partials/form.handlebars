@@ -1,0 +1,19 @@
+
+<h1>Ingrese un Producto</h1>
+<br>
+<form action='/productos' method='post'>
+    <div class="form-group">
+        <label for="title">Titulo</label>
+        <input class="form-control" name="title" type="text" required="true">
+    </div>
+    <div class="form-group">
+        <label for="price" >Precio</label>
+        <input class="form-control" style="-webkit-appearance: none;
+        margin: 0;" name="price" type="number" required="true" min="1" step="any">
+    </div>
+    <div class="form-group">
+        <label for="thumbnail">Imagen</label>
+        <input class="form-control" name="thumbnail" type="text" required="true">
+    </div>
+    <button class="btn btn-success mt-3 mb-5" >Enviar</button>
+</form>

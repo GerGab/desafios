@@ -1,0 +1,14 @@
+h1 Ingrese un Producto
+br
+form(action='/productos' method='post')
+  .form-group
+    label(for='title') Titulo
+    input.form-control(name='title' type='text' required='true')
+  .form-group
+    label(for='price') Precio
+    input.form-control(style='-webkit-appearance: none;\
+    margin: 0;' name='price' type='number' required='true' min='1' step="any")
+  .form-group
+    label(for='thumbnail') Imagen
+    input.form-control(name='thumbnail' type='text' required='true' )
+  button.btn.btn-success.mt-3.mb-5 Enviar

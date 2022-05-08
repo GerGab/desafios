@@ -1,12 +1,10 @@
 const express = require('express')
 const {routerProducts} = require('./routers/routerProducts.js')
 const { apiController  } = require('./apiControllers/apiController.js')
-const {engine} = require('express-handlebars')
 var path = require('path'); 
 const app = express()
 
-app.engine('handlebars', engine())
-app.set('view engine', 'handlebars')
+app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, '/views'));
 
 app.use("/productos",routerProducts)
