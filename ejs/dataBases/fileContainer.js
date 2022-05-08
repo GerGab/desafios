@@ -11,7 +11,6 @@ class fileContainer {
     }
 
     validate (object,database = []){
-        console.log(object)
         // verificar que la cantida de campos es la debida
         if (Object.keys(object).length>this.keys.length) {
             const error = new Error("cantidad de campos excesivos")
@@ -98,7 +97,6 @@ class fileContainer {
         }
         const objects = await this.readFromFile();
         const index = objects.findIndex(item => item.id === id);
-        console.log(index)
         if(index<0){
             const error = new Error(`no existe un producto con id: ${id}`)
             error.type = "db not found"
