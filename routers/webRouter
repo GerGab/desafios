@@ -1,0 +1,6 @@
+
+function webRouter (req,res){
+    res.redirect('/productos')
+}
+
+module.exports = webRouter

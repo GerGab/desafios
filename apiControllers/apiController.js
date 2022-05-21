@@ -1,19 +1,17 @@
 const { fileContainer } = require("../dataBases/fileContainer.js")
-const prodContainer = new fileContainer("./handle/dataBases/products.txt",["title","price","thumbnail","id"]); 
-
-let form = false
+const prodContainer = new fileContainer("./dataBases/products.txt",["title","price","thumbnail","id"]); 
 
 const apiController =  {
     getProducts: async (req, res) => {
         try{
             const products = await prodContainer.getAll()
             let show = products.length >0
-            res.render('index.handlebars',{form,products,show});
+            res.render('index',{products,show});
         }
         catch (err){
             let products = []
             let show = products.length >0
-            res.render('index.handlebars',{form,products,show});
+            res.render('index',{products,show});
         }
 
     },

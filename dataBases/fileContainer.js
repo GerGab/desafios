@@ -43,9 +43,10 @@ class fileContainer {
     async createProd(object){
         let objects = await this.readFromFile();
         try{
-            this.validate(object,objects)
+            true//this.validate(object,objects)
 
         }catch(err){
+            console.log(err.message)
             const error = new Error( err.message)
             error.type = "error de validacion"
             throw error

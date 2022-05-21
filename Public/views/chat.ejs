@@ -1,0 +1,18 @@
+
+<% let show = messages.length >0 %> 
+
+<% if(show) { %>
+        <% for (message of messages) {%>
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                    <h6 class="mb-1"><%=message.name%></h6>
+                    <small><%=message.date%></small>
+                </div>
+                <p class="mb-1"><%= message.message%></p>
+                <small></small>
+                </a>
+                <%}%>
+<%}else{%>
+    <br>
+    <h4>Nadie a dicho nada aún</h4>
+    <%}%>
